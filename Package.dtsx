@@ -1,0 +1,835 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/10/2021 4:14:49 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PROD-UCUDBS10"
+  DTS:CreatorName="UCUADM\SSLVPN-SOPORTEQK"
+  DTS:DTSID="{210BBCCC-7AEA-443F-9C66-0B4E51A1FB72}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{5CCD5AED-A7EC-489D-BD30-8153ECBB4DDF}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[172.16.5.45.RRHH.MGXCONS]"
+      DTS:CreationName="ADO.NET:IBM.Data.DB2.DB2Connection, IBM.Data.DB2, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208"
+      DTS:DTSID="{5A0186F3-F042-4AEB-A991-417A7467C5BA}"
+      DTS:ObjectName="172.16.5.45.RRHH.MGXCONS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Server=172.16.5.45;User ID=MGXCONS;Database=RRHH;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="369pVqtVbtM="
+            IV="gb7g0vuaRHIzwidi8J1Arw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>gb7g0vuaRHIzwidi8J1Ar59oZIIudL0bNFTIQkhjri0QPc415x/sTcNfmOJplA+S0Jd2MMPY2DjDdbKEiOmQNrrdPY0yDURtc1mNg2LqWUfVQJ3L/eFwDt1a+UjVRHtiApA7CAhtrmeAqMO/YqM02XOQs4teuGclshhJdb+V0KxRjhKljbf/Z4IQI6cBtt/F</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[172.16.5.45.RRHH.MGXCONS 1]"
+      DTS:CreationName="ADO.NET:IBM.Data.DB2.DB2Connection, IBM.Data.DB2, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208"
+      DTS:DTSID="{537A5039-D25F-4AB0-A355-5F19099263C6}"
+      DTS:ObjectName="172.16.5.45.RRHH.MGXCONS 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Server=172.16.5.45;User ID=MGXCONS;Database=RRHH;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="/zf8HwLXy3Q="
+            IV="uNDSnjjTh+0Snc6T/QROtg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>uNDSnjjTh+0Snc6T/QROtqvQKeVdRU97QfD2ioxmHTRNFpYOiYdY8ZZXZFRtGG2u1ZyjuXnQO4ldNbVPvT8v6zMQHZR3TqT+UqQQ++KNHfIXYlA99tWgfDbk5rMQEzBvYr/YQdmEe5U+gK5PNOuKFdNyo9ANBIHb1xHYA7WjlCne0u0fnJZSW90F4dxZ7TQv</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MAGIX.MGXCONS]"
+      DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{A2619CFD-8CC7-4570-8D47-71B04463CB2E}"
+      DTS:ObjectName="MAGIX.MGXCONS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=MGXCONS;Dsn=MAGIX;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="BC86GPvDR+o="
+            IV="FxUNhHZdYp+rZiorqIiaMg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>FxUNhHZdYp+rZiorqIiaMhYTu6XlFz3UsgVlnhcoh27LUtLcYoQhaomUOF2gBAyrnEjAQoW/0S7W65VbAJwR/vX4UKs5WEqnSoozwo0zq8z6VO+sCm6DRHPx6S209oAcCRRRkecEHG5sFrpc3bkZhpGpnGPN1FUSzUIb3/hV0Co=</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PROD-UCUDBS10\POWERBI.ODS_UCU]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1EB07122-9EC1-439E-82B0-1FD340C32AA4}"
+      DTS:ObjectName="PROD-UCUDBS10\POWERBI.ODS_UCU">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=PROD-UCUDBS10\POWERBI;Initial Catalog=ODS_UCU;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RRHH.MGXCONS2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E81FB02C-DEEA-4DBD-8924-090546253736}"
+      DTS:ObjectName="RRHH.MGXCONS2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RRHH;User ID=MGXCONS;Provider=IBMDADB2.DB2COPY1;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="hiiTU0PP/ZE="
+            IV="OHW/wj7wCOyKJ7dHJollvQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>OHW/wj7wCOyKJ7dHJollvWqyiCv0w+b3pwZLYPgUxlNXH1FE0HSy6EH/qt7L/zjB05gjnCNDsOrS65OvK0Un8qsYafmj+Zo4sBm7jL/xAjMK/4Wfp6bgR12vN7CODnp1ktBwsgYUqIQ57groTkT3K07jWOOEwsv1J+BSCz/89WDNboPy93W7gARQEfdi0oE+</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Saico.Saico_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{86B92A1C-25FD-4F53-A737-D182EBB2B53C}"
+      DTS:ObjectName="Saico.Saico_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=Saico;User ID=Saico_DW;Provider=SSISOLEDB.3;Location=10.245.0.30;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="KMIkEY0bLH8="
+            IV="C1ZR0Jf0GeY1FEQv1EWGzw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>C1ZR0Jf0GeY1FEQv1EWGz6yuIWi37EdpUsheTivjRM8EX9d64G+HMTn8Oqgui20IabhV04ekVpZpQYb5A/0JjUSAtoJ0TpnWVH/jwsEmYkA7VY7Us5MTidaNGtI/bFPJ8tD79zrJaaW9KxoGXdBzyvd+UWh7b1eZSQ2nc3FcjgxYlkb/SOvT72p7b0lHjwsh</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\MAGIX LIQ"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{03108C76-B666-4F4D-8DC6-FF40CF3C87C2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="MAGIX LIQ"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\MAGIX LIQ\Conversión de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\MAGIX LIQ\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\MAGIX LIQ\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[DEP_TIPO_DOCUMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="DEP_TIPO_DOCUMENTO"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_TIPO_DOCUMENTO]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\MAGIX LIQ\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEP_TIPO_DOCUMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="4"
+                      lineageId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEP_TIPO_DOCUMENTO]"
+                      name="Copia de DEP_TIPO_DOCUMENTO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_TIPO_DOCUMENTO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\MAGIX LIQ\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\MAGIX LIQ\MAGIX LIQ"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="MAGIX LIQ"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+C.ANIO_LIQUIDACION AS DEP_AÑO,
+C.MES_LIQUIDACION AS DEP_MES,
+C.TIPO_DOC AS DEP_TIPO_DOCUMENTO,
+C.NRO_DOC AS DEP_NRO_DOCUMENTO,
+SUM(C.VALOR_HORA_CONTRATO) AS DEP_VALOR_HORA_CONTRATO,
+SUM(C.VALOR_HORA_LIQUIDACION) AS DEP_VALOR_TOTAL_LIQUIDACION,
+CASE WHEN SUM(C.HORAS_MENSUALES_LIQUIDACION) = 0 THEN SUM(C.DESI_NOMINAL_MENSUAL)
+ELSE SUM(C.DESI_NOMINAL_MENSUAL)/SUM(C.HORAS_MENSUALES_LIQUIDACION)
+END AS DEP_VALOR_HORA_LIQUIDACION
+FROM (
+SELECT tab.CODIGO_LIQUIDACION, tab.NOMBRE_LIQUIDACION, YEAR(tab.LIQUIDACION_FECHA_DESDE) AS ANIO_LIQUIDACION,
+MONTH(tab.LIQUIDACION_FECHA_DESDE) AS MES_LIQUIDACION, tab.TIPO_DOC, tab.NRO_DOC, tab.NRO_DESIGNACION, tab.TIPO_CARGO_COD, tab.TIPO_CARGO_NOMBRE,
+tab.TIPO_CARGO_DOCENTE, DECIMAL(tab.HORAS_MENSUALES_CONTRATO,10,2) AS HORAS_MENSUALES_CONTRATO,DECIMAL(tab.HORAS_MENSUALES_LIQUIDACION,10,2) AS HORAS_MENSUALES_LIQUIDACION,
+tab.DESI_NOMINAL_MENSUAL,
+CASE WHEN tab.HORAS_MENSUALES_CONTRATO &gt; 0 THEN DECIMAL(DECIMAL(tab.DESI_NOMINAL_MENSUAL, 10,2) / DECIMAL(tab.HORAS_MENSUALES_CONTRATO, 10,2),10,2)
+WHEN (tab.HORAS_MENSUALES_CONTRATO = 0 AND TAB_SUM_PAD.TOTAL_HORAS_PAD IS NOT NULL AND TAB_SUM_PAD.TOTAL_HORAS_PAD &gt; 0) THEN DECIMAL(DECIMAL(tab.DESI_NOMINAL_MENSUAL, 10,2) / DECIMAL(TAB_SUM_PAD.TOTAL_HORAS_PAD, 10,2),10,2)
+ELSE tab.DESI_NOMINAL_MENSUAL
+END AS VALOR_HORA_CONTRATO,
+CASE WHEN tab.HORAS_MENSUALES_LIQUIDACION &gt; 0 THEN DECIMAL(DECIMAL(tab.DESI_NOMINAL_MENSUAL, 10,2) / DECIMAL(tab.HORAS_MENSUALES_LIQUIDACION, 10,2),10,2)
+WHEN (tab.HORAS_MENSUALES_LIQUIDACION = 0 AND TAB_SUM_PAD.TOTAL_HORAS_PAD IS NOT NULL AND TAB_SUM_PAD.TOTAL_HORAS_PAD &gt; 0) THEN DECIMAL(DECIMAL(tab.DESI_NOMINAL_MENSUAL, 10,2) / DECIMAL(TAB_SUM_PAD.TOTAL_HORAS_PAD, 10,2),10,2)
+ELSE tab.DESI_NOMINAL_MENSUAL
+END AS VALOR_HORA_LIQUIDACION
+FROM (
+select def_liq.rhproliqfincod as CODIGO_LIQUIDACION,def_liq.rhproliqfinnom AS NOMBRE_LIQUIDACION,def_liq.rhproliqfinfchdes as LIQUIDACION_FECHA_DESDE,
+liq.rhfundoctpo AS TIPO_DOC,liq.rhfundocnro AS NRO_DOC,des.rhdesnro AS NRO_DESIGNACION, tcar.rhtpocarcod AS TIPO_CARGO_COD,
+tcar.rhtpocarnom AS TIPO_CARGO_NOMBRE,tcar.rhtpocardocente AS TIPO_CARGO_DOCENTE,
+case when hor.rhhortratpohor = 'M' then des.rhdescanhorpag / hor.rhhortracanmespordia
+else des.rhdescanhorpag
+end as HORAS_MENSUALES_CONTRATO,
+CASE WHEN HORAS_LIQ.rhplfconcalcod = 2 then CAST(HORAS_LIQ.Liquidacion_Info AS DECIMAL(10,2)) * 20 -- SUELDO
+ELSE CAST(HORAS_LIQ.Liquidacion_Info AS DECIMAL(10,2)) -- SUELDO DOCENTE
+end as HORAS_MENSUALES_LIQUIDACION,
+ 
+sum(liq.rhplfmto) as DESI_NOMINAL_MENSUAL
+from rhprlifi def_liq
+inner join rhplflin liq on def_liq.rhproliqfincod=liq.rhproliqfincod
+inner join rhdes des on des.rhdesnro=liq.rhplfdesnro
+
+inner join rhhortra hor on des.rhhortrapag=hor.rhhortracod
+inner join rhcar car on des.rhcarcod=car.rhcarcod
+inner join rhcartpo tcar on tcar.rhtpocarcod=car.rhtpocarcod
+inner join (
+
+select aux.rhproliqfincod,aux.rhplfdesnro,aux.rhplfconcalcod, aux.rhplfconcalinf as Liquidacion_Info
+from rhplflin aux where aux.rhplfconcalcod in (2,26)
+AND AUX.RHPROLIQFINCOD&lt;&gt;1163
+AND translate(rtrim(AUX.rhplfconcalinf), 'X ',' .0123456789') = ' '
+) as HORAS_LIQ on HORAS_LIQ.rhproliqfincod=def_liq.rhproliqfincod and HORAS_LIQ.rhplfdesnro=liq.rhplfdesnro
+where liq.rhproliqfincod &gt;= 1121 and def_liq.rhconliqcod = 1 -- Sueldos desde Enero 2018
+and liq.rhplfdesnro &gt; 0 and liq.rhplfconcalcod in (2,26,36,4,994,995,996,484,1013,1023,1029)
+and des.rhcatcod &lt;&gt; 586 -- Ignoro las designacion de DEUDA ADUCU)
+group by def_liq.rhproliqfincod,def_liq.rhproliqfinnom,def_liq.rhproliqfinfchdes,liq.rhfundoctpo,liq.rhfundocnro,des.rhdesnro,tcar.rhtpocarcod,
+tcar.rhtpocarnom,tcar.rhtpocardocente, hor.rhhortratpohor, hor.rhhortracanmespordia,des.rhdescanhorpag,HORAS_LIQ.rhplfconcalcod,HORAS_LIQ.Liquidacion_Info
+) as tab
+LEFT JOIN (
+
+select f1.rhproliqfincod,f1.rhfundoctpo,f1.rhfundocnro,sum(d1.rhdescanhorpag) as TOTAL_HORAS_PAD
+from rhdes d1
+inner join rhplflin f1 on d1.rhdesnro=f1.rhplfdesnro
+where d1.rhdespad=0 and f1.rhplfconcalcod in (2,26) -- Para que tome la designacion solo una vez
+group by f1.rhproliqfincod,f1.rhfundoctpo,f1.rhfundocnro) as TAB_SUM_PAD
+ON TAB_SUM_PAD.rhproliqfincod=tab.CODIGO_LIQUIDACION and TAB_SUM_PAD.rhfundoctpo=tab.TIPO_DOC AND TAB_SUM_PAD.rhfundocnro=tab.NRO_DOC
+
+order by tab.CODIGO_LIQUIDACION, tab.TIPO_DOC, tab.NRO_DOC) C
+WHERE C.TIPO_CARGO_DOCENTE = 'S'
+GROUP BY C.ANIO_LIQUIDACION, C.MES_LIQUIDACION, C.TIPO_DOC, C.NRO_DOC
+ORDER BY C.ANIO_LIQUIDACION, C.MES_LIQUIDACION;</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\MAGIX LIQ\MAGIX LIQ.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RRHH.MGXCONS2]"
+                  connectionManagerRefId="Package.ConnectionManagers[RRHH.MGXCONS2]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_AÑO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_AÑO]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_AÑO]"
+                      name="DEP_AÑO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_MES]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_MES]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_MES]"
+                      name="DEP_MES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_TIPO_DOCUMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_TIPO_DOCUMENTO]"
+                      length="4"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_TIPO_DOCUMENTO]"
+                      name="DEP_TIPO_DOCUMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_NRO_DOCUMENTO]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_NRO_DOCUMENTO]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_NRO_DOCUMENTO]"
+                      name="DEP_NRO_DOCUMENTO"
+                      precision="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_HORA_CONTRATO]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_VALOR_HORA_CONTRATO]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_HORA_CONTRATO]"
+                      name="DEP_VALOR_HORA_CONTRATO"
+                      precision="31"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      name="DEP_VALOR_TOTAL_LIQUIDACION"
+                      precision="31"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_HORA_LIQUIDACION]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_VALOR_HORA_LIQUIDACION]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_HORA_LIQUIDACION]"
+                      name="DEP_VALOR_HORA_LIQUIDACION"
+                      precision="31"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_AÑO]"
+                      dataType="i4"
+                      name="DEP_AÑO" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_MES]"
+                      dataType="i4"
+                      name="DEP_MES" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_TIPO_DOCUMENTO]"
+                      dataType="wstr"
+                      length="4"
+                      name="DEP_TIPO_DOCUMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_NRO_DOCUMENTO]"
+                      dataType="numeric"
+                      name="DEP_NRO_DOCUMENTO"
+                      precision="10" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_VALOR_HORA_CONTRATO]"
+                      dataType="numeric"
+                      name="DEP_VALOR_HORA_CONTRATO"
+                      precision="31"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      dataType="numeric"
+                      name="DEP_VALOR_TOTAL_LIQUIDACION"
+                      precision="31"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].ExternalColumns[DEP_VALOR_HORA_LIQUIDACION]"
+                      dataType="numeric"
+                      name="DEP_VALOR_HORA_LIQUIDACION"
+                      precision="31"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_AÑO]"
+                      dataType="i4"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_AÑO]"
+                      name="DEP_AÑO" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_MES]"
+                      dataType="i4"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_MES]"
+                      name="DEP_MES" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_TIPO_DOCUMENTO]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_TIPO_DOCUMENTO]"
+                      name="DEP_TIPO_DOCUMENTO" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_NRO_DOCUMENTO]"
+                      dataType="numeric"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_NRO_DOCUMENTO]"
+                      name="DEP_NRO_DOCUMENTO"
+                      precision="10" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_VALOR_HORA_CONTRATO]"
+                      dataType="numeric"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_VALOR_HORA_CONTRATO]"
+                      name="DEP_VALOR_HORA_CONTRATO"
+                      precision="31"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      dataType="numeric"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      name="DEP_VALOR_TOTAL_LIQUIDACION"
+                      precision="31"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_VALOR_HORA_LIQUIDACION]"
+                      dataType="numeric"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[DEP_VALOR_HORA_LIQUIDACION]"
+                      name="DEP_VALOR_HORA_LIQUIDACION"
+                      precision="31"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="ODS_MAGIX_LIQ"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[ODS_MAGIX_LIQ]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PROD-UCUDBS10\POWERBI.ODS_UCU]"
+                  connectionManagerRefId="Package.ConnectionManagers[PROD-UCUDBS10\POWERBI.ODS_UCU]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].Columns[DEP_AÑO]"
+                      cachedDataType="i4"
+                      cachedName="DEP_AÑO"
+                      externalMetadataColumnId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_AÑO]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_AÑO]" />
+                    <inputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].Columns[DEP_MES]"
+                      cachedDataType="i4"
+                      cachedName="DEP_MES"
+                      externalMetadataColumnId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_MES]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_MES]" />
+                    <inputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].Columns[DEP_NRO_DOCUMENTO]"
+                      cachedDataType="numeric"
+                      cachedName="DEP_NRO_DOCUMENTO"
+                      cachedPrecision="10"
+                      externalMetadataColumnId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_NRO_DOCUMENTO]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_NRO_DOCUMENTO]" />
+                    <inputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].Columns[DEP_VALOR_HORA_CONTRATO]"
+                      cachedDataType="numeric"
+                      cachedName="DEP_VALOR_HORA_CONTRATO"
+                      cachedPrecision="31"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_VALOR_HORA_CONTRATO]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_HORA_CONTRATO]" />
+                    <inputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].Columns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      cachedDataType="numeric"
+                      cachedName="DEP_VALOR_TOTAL_LIQUIDACION"
+                      cachedPrecision="31"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_TOTAL_LIQUIDACION]" />
+                    <inputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].Columns[DEP_VALOR_HORA_LIQUIDACION]"
+                      cachedDataType="numeric"
+                      cachedName="DEP_VALOR_HORA_LIQUIDACION"
+                      cachedPrecision="31"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_VALOR_HORA_LIQUIDACION]"
+                      lineageId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB].Columns[DEP_VALOR_HORA_LIQUIDACION]" />
+                    <inputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].Columns[Copia de DEP_TIPO_DOCUMENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Copia de DEP_TIPO_DOCUMENTO"
+                      externalMetadataColumnId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_TIPO_DOCUMENTO]"
+                      lineageId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEP_TIPO_DOCUMENTO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_AÑO]"
+                      dataType="i4"
+                      name="DEP_AÑO" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_MES]"
+                      dataType="i4"
+                      name="DEP_MES" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_TIPO_DOCUMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="DEP_TIPO_DOCUMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_NRO_DOCUMENTO]"
+                      dataType="numeric"
+                      name="DEP_NRO_DOCUMENTO"
+                      precision="10" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_VALOR_HORA_CONTRATO]"
+                      dataType="numeric"
+                      name="DEP_VALOR_HORA_CONTRATO"
+                      precision="31"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_VALOR_TOTAL_LIQUIDACION]"
+                      dataType="numeric"
+                      name="DEP_VALOR_TOTAL_LIQUIDACION"
+                      precision="31"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEP_VALOR_HORA_LIQUIDACION]"
+                      dataType="numeric"
+                      name="DEP_VALOR_HORA_LIQUIDACION"
+                      precision="31"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\MAGIX LIQ.Paths[Salida de conversión de datos]"
+              endId="Package\MAGIX LIQ\ODS_MAGIX_LIQ.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de conversión de datos"
+              startId="Package\MAGIX LIQ\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\MAGIX LIQ.Paths[Salida de origen de OLE DB]"
+              endId="Package\MAGIX LIQ\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de OLE DB"
+              startId="Package\MAGIX LIQ\MAGIX LIQ.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="130.4,41.6"
+          Id="Package\MAGIX LIQ"
+          TopLeft="178.846160406192,92.1818215117968" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\MAGIX LIQ">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\MAGIX LIQ\ODS_MAGIX_LIQ"
+          TopLeft="552.857163079681,100.778969721751" />
+        <NodeLayout
+          Size="130.4,41.6"
+          Id="Package\MAGIX LIQ\MAGIX LIQ"
+          TopLeft="80.1098949431138,87.964354936577" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\MAGIX LIQ\Conversión de datos"
+          TopLeft="304.230780389888,95.3333367771574" />
+        <EdgeLayout
+          Id="Package\MAGIX LIQ.Paths[Salida de origen de OLE DB]"
+          TopLeft="210.509894943114,112.448845856867">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.7208854467743,0"
+              Start="0,0"
+              End="86.2208854467743,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="86.2208854467743,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\MAGIX LIQ.Paths[Salida de conversión de datos]"
+          TopLeft="478.630780389888,118.856153249454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="74.2263826897928,0"
+              Start="0,0"
+              End="66.7263826897928,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="66.7263826897928,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\MAGIX LIQ\MAGIX LIQ">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
